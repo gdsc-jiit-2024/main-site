@@ -1,9 +1,15 @@
 import './App.css';
-
+import Home from './components/Home/Home';
+import Events from './components/Events/Events';
+import Team from './components/Team/Team';
+import Work from './components/Work/Work';
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">My React App</h1>
+      <Home />
+      <Events />
+      <Team />
+      <Work />
     </div>
   );
 }
