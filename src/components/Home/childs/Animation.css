@@ -1,0 +1,201 @@
+
+.semi{
+    margin-left: 500%;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: #FABB09; 
+    margin-top:50%;
+    border-top-right-radius: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.semi2{
+    width: 200px;
+    height: 200px;
+    background-color: #FABB09;
+    margin: auto;
+    margin-top: 0%;
+    border-top-left-radius: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: -200px;
+    transition: background-color 0.3s ease;
+}
+
+.path{
+    margin-left: 500%;
+    top: 100%;
+}
+
+.outer-circle {
+    width: 250px;
+    height: 250px;
+    /* background-color: rgb(91, 99, 99);  */
+    border:1px solid #CCC;
+    /* margin-left:50%; */
+    top: 20%;
+    border-top-right-radius: 100%;
+    position: absolute;
+    border-bottom: none;
+    border-left: none;
+}
+
+.outer-circle2{
+    width: 250px;
+    height: 250px;
+    /* background-color: rgb(91, 99, 99);  */
+    border:1px solid #CCC;
+    /* margin-left:50%; */
+    top: 20%;
+    left: 750px;
+    border-top-left-radius: 100%;
+    position: absolute;
+    border-bottom: none;
+    border-right: none;
+}
+
+
+
+
+
+.categories{
+    position: absolute;
+}
+
+.home-head{
+    left: 365%;
+    top: 65%;
+    rotate: -68deg;
+    transition-timing-function: ease;
+}
+
+
+.events-head{
+    left: 420%;
+    top: 23%;
+    rotate: -33deg;
+    transition-timing-function: ease;
+}
+
+.team-head{
+    /* right: 420%; */
+    width: 100%;
+    left: 510%;
+    top: 21%;
+    rotate: 27deg;
+    transition-timing-function: ease;
+}
+
+.what-head{
+    width: 100%;
+    left: 567%;
+    top: 58%;
+    rotate: 62deg;
+    transition-timing-function: ease;
+}
+
+
+
+.home-head:hover, .events-head:hover, .team-head:hover, .what-head:hover{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.005rem;
+    
+}
+
+
+
+
+.outer-circle-pointer{
+    width:15px;
+    height:15px;
+    z-index: 100;
+    background:cyan;
+    border-radius:50%;
+    position:absolute;
+
+    /* ORIGINAL TOP, LEFT */
+    /* top:45%;
+    left:381%; */
+
+    /* NEW TOP, LEFT */
+    top: 100%;
+    left: 495%;
+
+    bottom:0%; 
+    right:0%;
+    overflow:hidden;
+    margin:auto;
+    /* animation: outer-circle-pointer  6s linear infinite; */
+}
+
+.outer-circle-pointer {
+    transition: transform 0.3s ease; /* Add a transition for smooth movement */
+    /* transition: background-color 0.3s ease; */
+}
+
+.outer-circle-pointer.home-clicked{
+    transform:rotate(20deg)
+                translate(-244px)
+                rotate(0deg);
+    background-color: #FABB09;
+    
+}
+
+.outer-circle-pointer.events-clicked {
+    transform:rotate(60deg)
+                translate(-240px)
+                rotate(0deg);
+    background-color: #E94336;
+    
+}
+
+.outer-circle-pointer.team-clicked{
+    transform:rotate(118deg)
+                translate(-240px)
+                rotate(0deg);
+    background-color: #34A853;
+}
+
+.outer-circle-pointer.what-clicked{
+    transform:rotate(153deg)
+                translate(-245px)
+                rotate(0deg);
+    background-color: #4285F3;
+    
+}
+
+.semi2.home-clicked, .circle.home-clicked{
+    background-color: #FABB09;
+}
+.semi2.events-clicked, .circle.events-clicked{
+    background-color: #E94336;
+}
+.semi2.team-clicked, .circle.team-clicked{
+    background-color: #34A853;
+}
+.semi2.what-clicked, .circle.what-clicked{
+    background-color: #4285F3;
+}
+
+.clicked{
+    font-weight: 600;
+}
+
+@keyframes outer-circle-pointer{
+    0%{
+      transform:rotate(0deg)
+                translate(-240px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-240px)
+                rotate(-360deg);
+    }
+  }
